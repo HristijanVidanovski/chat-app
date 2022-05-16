@@ -7,10 +7,11 @@ const{generateMessage}=require('./utils/messages')
 const{generateLocation}=require('./utils/messages')
 const{addUser,getUser, getUsersInRoom, removeUser}=require('./utils/users')
 
+
 const app = express()//call and run express aplication
 const server = http.createServer(app) // create new web server
 const io = socketio(server) // callsocket funcition
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 const publicDirectoryPath = path.join(__dirname, '../public')
 app.use(express.static(publicDirectoryPath)) // serve images, CSS files, and JavaScript files in a directory named public:
@@ -67,13 +68,7 @@ io.on('connection', (socket)=> {// eserver side connection
 
 
 
-class car  {
-    static task (){console.log('car is driving staic method')}
-    getcolor(){console.log('color is red instance')}
-}
-car.getcolor()
-const newcar = new car()
-newcar.getcolor()
+
 
 
 
