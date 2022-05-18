@@ -57,9 +57,6 @@ const getUsersInRoom = (room) => {
         }) 
         return usersInRoom
 }
-
-
-
 module.exports ={
     addUser,
     getUser,
@@ -84,84 +81,4 @@ module.exports ={
 
 
 
-
-
-
-/*
-const addUser = ({id, username, room}) => { // id se zema od konekcijata na socket
-//clean the data
-//username=username.trim().toLowerCase()// brisi praznomesto i golemi bukvi
-//room=room
-//username=username
-username=username.trim().toLowerCase()// brisi praznomesto i golemi bukvi
-room=room.trim().toLowerCase()
-
-//validate daata
-if (!username || !room) {
-    return {
-        error: 'Username and room are required'
-    }
-}
-//check for existing user
-
-const existingUser=users.find((user) => {
-return user.room === room && user.username===username
-})
-//validate existing user
-if (existingUser) {
-    return {
-        error: 'Username is in use'
-    }
-
-
-}
-
- //store user
- const user = {id, username, room}
- users.push(user)
- return {user}
-
-
-}
-*/
-/*
-const removeUser = (id) => {
-const index = users.findIndex((user) => { //prvo se noga array index na user od id
- 
-return user.id === id//ako id od user e isto so id od users array vrati index na toj item
-
-})
-
-if (index !== -1) {//ako item index ne e minus 
-    //console.log(users.splice(index, 1))
-    return users.splice(index, 1)[0]//vraka users array so ibrisan item so index 0 go vrakam item a ne arraycd
-    // splice remove elemnt in array by index 1-remove one item
-}
-}
-*/
-/*
-const getUser = (id) => {
-    
-    const findExistingUser=users.find((user) => {
-        return user.room === room && user.username===username
-        })
-
-       
-
-        if (!findExistingUser) {
-return {error: 'User not found'}
-        }
-     
-        return findExistingUser 
-        
- }
-*/
-/** */
-/*
-const getUsersInRoom = (room) => {
-    const usersInRoom=users.filter((user) => {
-        return user.room === room
-        }) 
-        return usersInRoom
-}*/
 

@@ -75,95 +75,22 @@ $sendLocationButton.addEventListener('click', () => {
     $sendLocationButton.setAttribute('disabled', 'disabled')//disable button when getting for data
     })          
 })       
-
-
-
-
-     
-      
-     
-           
-        
-
-//const messageTemplate = document.querySelector('#message-template').innerHTML
-///sets or return html content of elemenent(message-template script)selektira html od scrtipta(template)
-//$messages = document.querySelector('#messages')
-//div kade treba da se vmetni template od mustache render, go selektira div kade ke se prikazva template
-//const html = Mustache.render(messageTemplate, {})
-//mustache.render zema eden script ia na istion mu daava vreednosti na var, pravi script template
-// template so vrednosti se dava na div za da se prikazi
-//$messages.insertAdjacentHTML('beforeend', html) 
-//toj template se vmetnuva vo div da se prikazi
-
-
-
-
-
-
-
-
-
-
-
-
-/*$messageForm = document.querySelector('#message-form')
-$messageFormInput = $messageForm.querySelector('input')
-$messageFormButton = $messageForm.querySelector('button')
-$messages = document.querySelector('#messages')//messages div id od index html/location for render template
-$sidebar = document.querySelector('#sidebar')
-$locationFormButton = document.querySelector('#send-location')
-
-//template, go povrzva so script od html. inner go povrzva so html vnatre vo script
-const messageTemplate = document.querySelector('#message-template').innerHTML
-const locationTemplate = document.querySelector('#location-template').innerHTML
-const sideBarTemplate = document.querySelector('#sidebar-template').innerHTML
-
-//options
-const {username, room} = Qs.parse(location.search, {ignoreQueryPrefix: true})//question marks goes away from queru(?username=rfewds&room=fewcsa)
-
-*/
-// client-side
-
-
-
-
-/*
-const socket = io() // connect to server
-socket.emit('join', {username, room}, (error) => {
-    //console.log(error)
-if (error) {
-    alert(error)
-    location.href = '/'   // da odi napocetna login
-}
-})
-//ako ima error koj idi od call vo index fjata ke se izvrsi, ako ne nema.
-
-const autoscroll = () => {
 const $newMessage = $messages.lastElementChild
 
 //height of the new message
 const $newMessageStyles = getComputedStyle($newMessage )
 const newMessageMargin = parseInt($newMessageStyles.marginBottom)
 const newMessageHeight = $newMessage.offsetHeight + newMessageMargin
-
 //visible height
 const visibleHeight = $messages.offsetHeight
-
 //height of message container
 const containerHeight = $messages.scrolHeight
-
 //how far i have scroled
-
 const scrollOffset = $messages.scrolTop + visibleHeight
-
 if (containerHeight - newMessageHeight <= scrollOffset) {
     $messages.scrolTop = $messages.scrolHeight
 }
-
 }
-
-
-
 socket.on('message', (message) => {
    console.log(message)
     const html = Mustache.render(messageTemplate, {
@@ -195,13 +122,7 @@ socket.on('roomData', ({room, users}) => {
         users
     })// html to be rendered//mustache pravi render na template od js na html
     $sidebar.insertAdjacentHTML('beforeend', html)//insert html in a div element
-
-
-
-    console.log(users)
-    console.log(room)
 })
-
 $messageForm.addEventListener('submit', (e) => {//when button is selected do something
    e.preventDefault() //no page refresh
    const message = document.querySelector('input').value
@@ -221,13 +142,6 @@ $messageForm.addEventListener('submit', (e) => {//when button is selected do som
         console.log('Message was delivered')
     })
 })
-
-
-
-
-
-
-
 $locationFormButton.addEventListener('click', () => {//when button is selected do something
     
      const message = document.querySelector('input').value
@@ -244,13 +158,7 @@ $locationFormButton.addEventListener('click', () => {//when button is selected d
 console.log(locationMessageCallback)
 $locationFormButton.removeAttribute('disabled')
 })
-
-
-
-
-
     })
  })
 
-*/
- 
+
